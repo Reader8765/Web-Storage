@@ -1,3 +1,15 @@
 <!DOCTYPE HTML>
 <html>
+  <body>
+    <h1 id="wait">Waiting...</h1>
+  </body>
+  <script>
+    var ws = new WebSocket('ws://localhost:40510');
+    ws.onopen = ()=>{
+      ws.send("Client is up!");
+    }
+    ws.onmessage = (msg)=>{
+      console.log(msg);
+    }
+  </script>
 </html>
