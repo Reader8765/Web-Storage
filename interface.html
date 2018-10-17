@@ -8,7 +8,7 @@
     wss.onopen = ()=>{
       ws.send("Client is up!");
     }
-    ws.onmessage = (msg)=>{
+    wss.onmessage = (msg)=>{
       console.log(msg);
     }
   </script>
