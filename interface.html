@@ -4,8 +4,8 @@
     <h1 id="wait">Waiting...</h1>
   </body>
   <script>
-    var ws = new WebSocket('ws://reader8765.github.io/Web-Storage:40510');
-    ws.onopen = ()=>{
+    var wss = new WebSocket('wss://reader8765.github.io/Web-Storage:40510');
+    wss.onopen = ()=>{
       ws.send("Client is up!");
     }
     ws.onmessage = (msg)=>{
